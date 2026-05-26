@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Números Primos - Seguridad</title>
+    <link rel="stylesheet" href="../css/primos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Números Primos aplicados a la Seguridad</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../html/fibonacci.html">Desafío Fibonacci</a></li>
+                <li><a href="../html/primos.html" class="activo">Desafío Números Primos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner-presentacion">
+            <img src="../img/unknown_artist_-_portrait_of_marin_mersenne_1588_-_1648_of_the_order_of_minimal_fathers_-_meisterdrucke-924152jpg.webp"
+                alt="Retrato de Marin Mersenne">
+        </div>
+
+        <article class="contenedor-bloque">
+            <h2>Breve Historia de los "Átomos" de la Matemática</h2>
+            <p>El estudio de los números primos se remonta a más de 2000 años atrás con los matemáticos de la Antigua
+                Grecia. Fue Euclides quien demostró por primera vez un teorema fundamental: los números primos son
+                infinitos. Siglos más tarde, Eratóstenes ideó un método visual (la Criba de Eratóstenes) para filtrar y
+                encontrar estos números descartando los múltiplos en una tabla.</p>
+            <p>Se les llama los "átomos" de la aritmética porque, según el Teorema Fundamental de la Aritmética,
+                cualquier número entero mayor que 1 puede descomponerse de forma única como el producto de números
+                primos. Son las piezas fundamentales e indivisibles de toda la estructura numérica universal.</p>
+        </article>
+
+        <article class="contenedor-bloque">
+            <h2>En el Mundo Real</h2>
+            <p>En seguridad informática, los números primos son la base esencial para generar claves de encriptación y
+                códigos de acceso seguros en sistemas bancarios, firmas digitales y protocolos de comunicación privada.
+            </p>
+        </article>
+
+        <article class="contenedor-bloque">
+            <h2>La Sorprendente Estrategia de la Naturaleza</h2>
+            <p>Lejos de las pantallas, la evolución biológica descubrió los números primos mucho antes que los humanos.
+                El caso más asombroso es el de las <strong>Cigarras Periódicas</strong> (Magicicada) en Norteamérica.
+                Estos insectos permanecen enterrados en estado ninfal durante periodos exactos de 13 o 17 años (ambos
+                números primos) antes de salir a la superficie en masa para reproducirse.</p>
+            <p>Los científicos descubrieron que usan estos ciclos matemáticos como una genial estrategia de
+                supervivencia: al elegir un ciclo de vida primo, minimizan drásticamente la probabilidad de coincidir
+                con los ciclos de vida de sus depredadores locales. Si tuvieran ciclos compuestos (como 12 o 16 años),
+                coincidirían constantemente con depredadores que tienen ciclos de 2, 3, 4 o 6 años, arriesgándose a la
+                extinción.</p>
+        </article>
+
+        <article class="contenedor-bloque">
+            <h2>El Problema Real: La Asimetría y el Algoritmo RSA</h2>
+            <p>¿Cómo protegen estos números tus datos bancarios o tus mensajes de WhatsApp? La respuesta está en una
+                propiedad matemática llamada <strong>asimetría computacional</strong>. Para una computadora actual,
+                multiplicar dos números primos gigantescos (de más de 300 dígitos cada uno) es una tarea ultra veloz que
+                toma microsegundos. Sin embargo, hacer el proceso inverso —tomar el número gigantesco resultante y
+                averiguar cuáles fueron los dos primos originales que lo generaron— es una tarea titánica.</p>
+            <p>Este dilema de la factorización es el pilar del sistema <strong>RSA</strong>. Tu computadora usa ese
+                resultado gigante como "clave pública" para cerrar el candado de tus datos de forma abierta. Pero solo
+                quien conozca los dos factores primos originales ("clave privada") puede abrir el candado. Romper esta
+                seguridad por fuerza bruta le tomaría a las supercomputadoras modernas miles de millones de años.</p>
+        </article>
+
+        <article class="contenedor-bloque">
+            <h2>Explicación del Algoritmo</h2>
+            <p>Un número primo solo tiene dos divisores exactos: el 1 y él mismo. El programa cuenta cuántas divisiones
+                dan residuo exacto de cero usando el operador de residuo (módulo %). Si al finalizar el bucle iterativo
+                el contador de divisores es estrictamente igual a 2, el número es seguro.</p>
+        </article>
+
+        <section class="seccion-interactiva">
+
+            <div class="columna-formulario">
+                <h3>Verificador de Código</h3>
+                <form id="formularioPrimos" onsubmit="event.preventDefault();">
+                    <div class="grupo-formulario">
+                        <label for="codigoSec">Ingresa el código numérico:</label>
+                        <input type="number" id="codigoSec" min="1" placeholder="Ej. 17" required>
+                    </div>
+                    <button type="submit" id="btnVerificarPrimo">Validar Seguridad</button>
+                </form>
+            </div>
+
+            <div class="columna-resultado">
+                <h3>Resultados</h3>
+                <div id="resultadoPrimos" class="caja-resultado">Aquí aparecerá la validación de tu código...</div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../javascrip/primos.js"></script>
+</body>
+
+</html>

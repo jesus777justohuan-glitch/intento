@@ -1,0 +1,197 @@
+/* ==========================================================================
+   1. CONFIGURACIÓN DEL BOX MODEL Y GENERALES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garantiza el cálculo exacto de dimensiones */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #ffffff; /* Fondo limpio sin imagen por requerimiento */
+}
+
+/* ==========================================================================
+   2. HEADER Y NAV TOTALMENTE CENTRADOS Y PROTEGIDOS
+   ========================================================================== */
+header {
+    background-color: #ffffff; 
+    color: #0f172a;            
+    text-align: center;
+    padding: 30px 25px;        
+    border-bottom: 1px solid #e2e8f0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); 
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+
+nav {
+    width: 100%;
+    text-align: center; 
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex; 
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #000000; 
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #0f172a; 
+    background-color: #f1f5f9;
+}
+
+nav ul li a.activo {
+    color: #0f172a;            
+    background-color: #f1f5f9; 
+    font-weight: 700;
+    border-bottom: 2px solid #0f172a; /* Subrayado sutil indicando página activa */
+    border-radius: 6px 6px 0 0;
+}
+
+/* ==========================================================================
+   3. MAQUETACIÓN LINEAL Y CONTENEDORES DE TEXTO
+   ========================================================================== */
+main {
+    max-width: 800px; 
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+}
+
+.contenedor-bloque {
+    background-color: #ffffff;
+    padding: 30px 35px; /* Amplio espacio interno para legibilidad */
+    margin-bottom: 25px;
+    border-radius: 8px; 
+    border: 1px solid #cbd5e1; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.contenedor-bloque h2 {
+    color: #000000; /* Azul corporativo académico para jerarquía visual */
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+    text-align: center; 
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 6px;
+}
+
+.contenedor-bloque p {
+    margin-bottom: 14px;
+    text-align: justify; /* Alineación limpia para textos largos */
+    color: #334155;
+    font-size: 1rem;
+}
+
+.contenedor-bloque p:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilos específicos de la sección de enlaces */
+.enlaces-proyecto {
+    text-align: center;
+}
+
+.caja-enlaces {
+    margin-top: 15px;
+    font-size: 1.05rem;
+}
+
+.enlaces-proyecto a {
+    color: #173880;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.enlaces-proyecto a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.enlaces-proyecto .separador {
+    color: #cbd5e1;
+    margin: 0 10px;
+    font-weight: normal;
+}
+
+/* ==========================================================================
+   4. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: #ffffff;
+    color: #64748b;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #e2e8f0;
+    width: 100%;
+}
+
+/* ==========================================================================
+   5. DISEÑO RESPONSIVO (DIRECCIONAMIENTO PARA DISPOSITIVOS MÓVILES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 15px;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Apila el menú verticalmente en celulares */
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    nav ul li a.activo {
+        border-bottom: none;
+        border-left: 3px solid #0f172a;
+        border-radius: 0 6px 6px 0;
+    }
+
+    .contenedor-bloque {
+        padding: 20px 20px; /* Reduce espaciados en pantallas pequeñas */
+    }
+    
+    .enlaces-proyecto .separador {
+        display: block;
+        margin: 10px 0;
+        visibility: hidden; /* Convierte el separador en un salto de línea limpio */
+    }
+}

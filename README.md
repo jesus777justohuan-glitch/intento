@@ -26,7 +26,7 @@ La organización de los archivos y carpetas en este repositorio se distribuye de
 ```
 
     
-#🚀 Características Clave
+##🚀 Características Clave
 Simulador Fibonacci (Ahorro Progresivo): Permite proyectar un plan de ahorro basado en la secuencia matemática y evaluar la viabilidad financiera real de la curva exponencial en un mes.
 
 Guardianes de la Web (Cifrado con Primos): Demuestra el uso de la asimetría matemática mediante un sistema interactivo que verifica números primos y cifra contraseñas utilizando operaciones lógicas complejas bit a bit (XOR).
@@ -34,7 +34,7 @@ Guardianes de la Web (Cifrado con Primos): Demuestra el uso de la asimetría mat
 Diseño Unificado y Responsivo: Interfaz oscura elegante (predominio de gris plomo con acentos en café avellana) calibrada de manera simétrica para computadoras y pantallas móviles.
 
 
-🛠️ Tecnologías Utilizadas
+##🛠️ Tecnologías Utilizadas
 HTML5 Semántico: Estructuración limpia de formularios, bloques lógicos y contenedores.
 
 CSS3 Personalizado: Uso avanzado de variables globales (:root), Flexbox, selectores específicos y bloques @media para un comportamiento responsivo fluido.
